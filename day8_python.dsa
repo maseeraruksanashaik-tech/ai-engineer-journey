@@ -1,0 +1,136 @@
+# Dictionary and Hashing
+
+# Python - Dictionary
+
+student_details = {
+    "name": "saba",
+    "department": "Bs.c",
+    "course": "data science",
+    "marks": 892,
+    "age": 18,
+    "second_language": "hindi"
+}
+
+# Accessing values
+print(student_details["name"])
+print(student_details["age"])
+print(student_details["course"])
+
+# Adding a new value
+student_details["categories"] = "female"
+print(student_details["categories"])
+
+# Changing a value
+student_details["age"] = 19
+print(student_details["age"])
+
+# keys()
+print(student_details.keys())
+
+# values()
+print(student_details.values())
+
+# items()
+print(student_details.items())
+
+# get()
+print(student_details.get("second_language"))
+
+# Checking keys using in
+print("hall ticket" in student_details)
+print("collage name" in student_details)
+print("department" in student_details)
+
+
+# DSA - Hashing / Frequency Count
+
+numbers = [4, 7, 4, 2, 7, 4, 9, 2]
+
+count = {}
+
+for number in numbers:
+    if number in count:
+        count[number] = count[number] + 1
+    else:
+        count[number] = 1
+
+print(count)
+
+# Challenge 1 - Frequency Count
+
+numbers = [4, 7, 4, 2, 7, 4, 9, 2]
+
+count = {}
+
+for number in numbers:
+    if number in count:
+        count[number] = count[number] + 1
+    else:
+        count[number] = 1
+
+print("Frequency count:", count)
+
+
+# Challenge 2 - First Repeated Number
+
+numbers = [10, 20, 30, 20, 40, 50]
+
+seen = set()
+
+for number in numbers:
+    if number in seen:
+        print("First repeated number:", number)
+        break
+    seen.add(number)
+
+
+# Challenge 3 - Count Each Name
+
+names = ["saba", "sara", "saba", "maseera", "sara", "saba"]
+
+count = {}
+
+for name in names:
+    if name in count:
+        count[name] = count[name] + 1
+    else:
+        count[name] = 1
+
+print("Name count:", count)
+
+
+# Challenge 4 - Find Student Marks
+
+marks = {
+    "saba": 85,
+    "sara": 92,
+    "maseera": 88,
+    "zara": 76
+}
+
+name = input("Enter name: ")
+
+print("Marks:", marks[name])
+
+
+# Challenge 5 - Most Frequent Number
+
+numbers = [5, 2, 5, 8, 2, 5, 9, 8]
+
+count = {}
+
+for number in numbers:
+    if number in count:
+        count[number] = count[number] + 1
+    else:
+        count[number] = 1
+
+most_frequent = None
+highest_count = 0
+
+for number in count:
+    if count[number] > highest_count:
+        highest_count = count[number]
+        most_frequent = number
+
+print("Most frequent number:", most_frequent)
