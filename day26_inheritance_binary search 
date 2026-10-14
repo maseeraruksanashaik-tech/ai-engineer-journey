@@ -1,0 +1,102 @@
+Python
+
+# Example 1: Inheritance using Human and LivingBeing
+
+class Human:
+    def __init__(self, gender, age):
+        self.gender = gender
+        self.age = age
+
+    def display(self):
+        print("Gender:", self.gender)
+        print("Age:", self.age)
+
+
+class LivingBeing(Human):
+    def __init__(self, gender, age, country):
+        super().__init__(gender, age)
+        self.country = country
+
+    def display_country(self):
+        print("Country:", self.country)
+
+
+human1 = Human("Male", 23)
+human1.display()
+
+person1 = LivingBeing("Female", 18, "India")
+person1.display()
+person1.display_country()
+
+
+# Example 2: Inheritance using Parent and Child
+
+class Parent:
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print("Name:", self.name)
+
+
+class Child(Parent):
+    def __init__(self, name, age):
+        super().__init__(name)
+        self.age = age
+
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+
+parent1 = Parent("sanu")
+parent1.display()
+
+child1 = Child("sanu", 18)
+child1.display()
+Python
+
+# Example 1: Binary Search in a list of numbers
+
+numbers = [10, 20, 30, 40, 50, 60, 70, 80,
+           90, 100, 110, 120, 130, 140, 150]
+
+target = 130
+left = 0
+right = len(numbers) - 1
+
+while left <= right:
+    middle = (left + right) // 2
+
+    if numbers[middle] == target:
+        print("Found:", target)
+        break
+
+    elif numbers[middle] < target:
+        left = middle + 1
+
+    else:
+        right = middle - 1
+
+
+# Example 2: Binary Search in a marks list
+
+marks = [5, 10, 15, 20, 25, 30, 35, 40, 45,
+         50, 55, 60, 65, 70, 75, 80, 85, 90]
+
+target = 85
+left = 0
+right = len(marks) - 1
+
+while left <= right:
+    middle = (left + right) // 2
+
+    if marks[middle] == target:
+        print("Found:", target)
+        break
+
+    elif marks[middle] < target:
+        left = middle + 1
+
+    else:
+        right = middle - 1
